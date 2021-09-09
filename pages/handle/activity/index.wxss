@@ -1,0 +1,40 @@
+.title {
+    font-size: 36rpx;
+    color: #4a4f58;
+    line-height: 50rpx;
+    margin-bottom: 10rpx;
+}
+
+.line {
+    height: 2rpx;
+    background: #e9e9e9;
+}
+
+.text {
+    margin-top: 10rpx;
+    font-size: 30rpx;
+    line-height: 36rpx;
+    display: inline-block;
+    color: #a6a6a6;
+    word-wrap: break-word;
+    font-family: 'PingFang SC-Medium';
+}
+
+.case-page {
+    padding: 10rpx;
+    background: #f5f9fc;
+}
+.list-masonry {
+    column-count: 2;
+    column-gap: 16rpx;
+}
+.item-masonry {
+    background-color: #fff;
+    break-inside: avoid;
+    box-sizing: border-box;
+    padding: 10rpx;
+    margin-bottom: 16rpx;
+}
+.item-masonry image {
+    width: 100%;
+}

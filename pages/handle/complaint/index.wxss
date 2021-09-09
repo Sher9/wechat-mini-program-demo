@@ -1,0 +1,101 @@
+.list {
+    width: 100%;
+    border-bottom: 1rpx solid #e9e9e9;
+    justify-content: space-between;
+    position: relative;
+    padding: 10rpx 5%;
+    box-sizing: border-box;
+}
+
+.left_icon {
+    height: 100rpx;
+    width: 100rpx;
+    background: #028ffb;
+    text-align: center;
+    color: #fff;
+    font-size: 36rpx;
+    position: absolute;
+    top: 20rpx;
+}
+
+.right_con {
+    position: relative;
+    padding-left: 120rpx;
+    padding-top: 10rpx;
+}
+
+.top_title {
+    width: 100%;
+    display: flex;
+    margin-bottom: 6rpx;
+    line-height: 40rpx;
+    height: 40rpx;
+}
+
+.top_title .title {
+    position: relative;
+    display: flex;
+    font-size: 40rpx;
+    color: black;
+    margin-right: 20rpx;
+}
+.top_title .class {
+    font-size: 34rpx;
+    color: #888;
+}
+
+.top_title .button {
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    width: 120rpx;
+    font-size: 30rpx;
+    text-align: center;
+    border-radius: 6rpx;
+}
+.top_title .button.effective {
+    background: #028ffb;
+    color: #fff;
+}
+.top_title .button.invalid {
+    background: #eee;
+    color: #bbb;
+}
+
+.text {
+    font-size: 32rpx;
+    color: #535353;
+    word-wrap: break-word;
+    line-height: 50rpx;
+}
+
+.date {
+    font-size: 30rpx;
+    line-height: 50rpx;
+}
+
+.date.effective {
+    color: #00aeff;
+}
+.date.invalid {
+    color: #bbb;
+}
+.file {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10rpx;
+}
+
+.file .file_div {
+    position: relative;
+    margin-bottom: 12rpx;
+    margin-left: 5rpx;
+}
+
+.file .file_div image {
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 8rpx;
+    vertical-align: bottom;
+}

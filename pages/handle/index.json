@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "业务办理",
+    "usingComponents": {
+        "van-search": "../../static/plugin/vant/search/index",
+        "van-icon": "../../static/plugin/vant/icon/index",
+        "van-tab": "../../static/plugin/vant/tab/index",
+        "van-tabs": "../../static/plugin/vant/tabs/index",
+        "van-button": "../../static/plugin/vant/button/index",
+        "van-transition": "../../static/plugin/vant/transition/index",
+        "activity": "./activity/index",
+        "complaint": "./complaint/index",
+        "org": "./org/index"
+    }
+}

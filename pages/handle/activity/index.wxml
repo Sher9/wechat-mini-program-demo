@@ -1,0 +1,37 @@
+<!-- <scroll-view scroll-y="true" lower-threshold="800">
+    <view class="list">
+        <view
+            class="poi"
+            bindtap="viewPOI"
+            wx:for="{{ activityList }}"
+            wx:for-item="activity"
+            wx:key="activity.id"
+            bindtap="viewDetail"
+            data-id="{{ activity.id }}"
+        >
+            <image src="{{ activity.medias[0].mediaPath }}"></image>
+            <view class="title">{{ activity.title }}</view>
+            <view class="line"></view>
+            <view class="text">{{ activity.desc }}</view>
+        </view>
+    </view>
+</scroll-view> -->
+
+<scroll-view scroll-y="true" lower-threshold="800">
+    <view class="case-page">
+        <view class="list-masonry">
+            <view
+                class="item-masonry"
+                wx:for="{{ noteList }}"
+                wx:key="item.id"
+                bindtap="viewDetail"
+                data-id="{{ item.id }}"
+            >
+                <image src="{{ item.url }}" mode="widthFix"></image>
+                <view class="title">{{ item.title }}</view>
+                <view class="line"></view>
+                <view class="text">{{ item.desc }}</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

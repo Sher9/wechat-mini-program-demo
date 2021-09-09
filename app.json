@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/logs/logs",
+    "pages/handle/index",
+    "pages/handle/activity-detail/index",
+    "pages/handle/complaint-detail/index",
+    "pages/handle/org-detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#028FFB",
+    "navigationBarTitleText": "智慧社区",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/handle/index",
+        "iconPath": "static/images/icon_api.png",
+        "selectedIconPath": "static/images/icon_api_select.png",
+        "text": "接口"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "static/images/icon_api.png",
+        "selectedIconPath": "static/images/icon_api_select.png",
+        "text": "接口"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

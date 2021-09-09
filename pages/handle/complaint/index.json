@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "van-rate": "../../../static/plugin/vant/rate/index"
+    }
+}

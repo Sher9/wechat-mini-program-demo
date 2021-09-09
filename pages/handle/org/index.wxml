@@ -1,0 +1,29 @@
+<scroll-view scroll-y="true" lower-threshold="800">
+    <view wx:for="{{ orgList }}" wx:for-item="org" wx:key="id" class="list">
+        <view wx:if="{{ org.medias.length > 0 }}" class="left_img">
+            <image
+                src="{{ org.medias[0].mediaPath }}"
+                data-medias="{{ org.medias }}"
+                bind:tap="previewImage"
+            ></image>
+        </view>
+        <view wx:else class="left_img">
+            <image
+                src="../../../static/images/index_top.png"
+                width="100%"
+                height="100%"
+            ></image>
+        </view>
+        <view class="right_con">
+            <text class="title">{{ org.name }}</text>
+            <text class="date">登记时间 {{ org.time }}</text>
+            <text
+                class="state effective"
+                bindtap="viewDetail"
+                data-id="{{ org.id }}"
+                >{{ org.status }}</text
+            >
+            <text class="text">{{ org.desc }}</text>
+        </view>
+    </view>
+</scroll-view>

@@ -1,0 +1,104 @@
+.main_view {
+    margin-bottom: 30rpx;
+}
+
+.partition_line {
+    width: 100%;
+    height: 50rpx;
+    border-top: 1rpx solid #e9e9e9;
+    border-bottom: 1rpx solid #e9e9e9;
+    background: #f1f1f1;
+    box-sizing: border-box;
+    color: #999;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    padding-left: 16px;
+}
+
+.file {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.previewimg {
+    width: 220rpx;
+    height: 220rpx;
+    margin: 2%;
+    position: relative;
+}
+.previewimg image {
+    width: 100%;
+    height: 100%;
+}
+
+.file_add {
+    width: 220rpx;
+    height: 220rpx;
+    margin: 2%;
+    border: 1rpx solid #e9e9e9;
+    text-align: center;
+}
+.file_delete {
+    position: absolute;
+    top: -20rpx;
+    right: 0;
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    border-radius: 50%;
+    background: #ff6d6d;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.file_add image {
+    height: 50%;
+    width: 50%;
+    margin-top: 25%;
+}
+
+.process_view {
+    position: relative;
+    padding: 3% 3%;
+    border-bottom: 1rpx solid #e9e9e9;
+}
+
+.role {
+    width: 100%;
+    height: 40rpx;
+    font-size: 36rpx;
+    line-height: 40rpx;
+    margin-bottom: 10rpx;
+    color: #7bb8d6;
+    display: inline-block;
+}
+
+.date {
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: #bbb;
+}
+
+.text {
+    font-size: 28rpx;
+    line-height: 40rpx;
+    display: inline-block;
+    color: #838383;
+}
+
+.button {
+    width: 90%;
+    height: 50rpx;
+    margin: 2% 5%;
+    text-align: center;
+    line-height: 50rpx;
+    background: #028ffb;
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 30rpx;
+    cursor: pointer;
+}

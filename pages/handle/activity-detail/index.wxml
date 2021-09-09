@@ -1,0 +1,61 @@
+<view class="main_view">
+    <view class="partition_line">基本信息</view>
+    <view>
+        <van-cell title="活动名称" value="门前大桥下，游过一群鸭"/>
+        <van-cell title="活动主题" value="门前大桥下，游过一群鸭"/>
+        <van-cell title="活动类型" value="门前大桥下，游过一群鸭"/>
+        <van-cell title="活动时间" value="门小区的绿化和娱乐设施"/>
+        <van-cell title="活动地点" value="门前大桥下，游过一群鸭"/>
+        <van-cell title="负责人" value="门前大桥下，游过一群鸭"/>
+        <view class=content_view">
+            <text class="content_title">参与人员</text>
+            <view class="content_tag">
+                <van-tag plain type="primary" size="large" style="line-height:80rpx; margin-right:10rpx;">老年人</van-tag>
+                <van-tag plain type="primary" size="large" style="line-height:80rpx; margin-right:10rpx;">留守</van-tag>        
+            </view>
+        </view>        
+        <van-cell title="管理部门" value="门小区的绿化和娱乐设"/>
+        <van-cell title="活动资源" value="门前大桥下，游过一群鸭"/>
+        <van-cell title="活动说明" value="门前大桥下，游过一群鸭"/>
+    </view>
+    <view class="partition_line">活动上传附件</view>
+    <view class="file">
+        <view wx:for="{{uploadImglist}}" wx:for-item="img" wx:key="{{index}}" class="previewimg">
+            <view class="file_delete" data-index="{{index}}" bindtap="deleteImg">
+                <van-icon name="cross" />
+            </view>
+            <image src="{{img}}" data-src="{{img}}" bindtap="previewUploadImage"></image>
+        </view>
+        <view class="file_add" bindtap="chooseImg">
+            <image
+                src="../../../static/images/file_add.png"
+                width="100%"
+                height="100%"
+            ></image>
+        </view>
+    </view>
+    <view class="partition_line">审批情况</view>
+    <van-cell title="审批说明" value="门小区的绿化和娱乐设"/>
+    <view class="partition_line">活动情况</view>
+    <van-cell title="活动情况" value="门小区的绿化和娱乐设"/>
+    <view class="file">
+        <view wx:for="{{imglist}}" wx:for-item="image" wx:key="{{index}}" class="previewimg">
+            <image src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+        </view>
+    </view>
+    <view class="partition_line">反馈情况</view>
+        <view class=rate_view">
+            <text class="rate_text">综合评分</text>
+            <van-rate value="{{ score }}" color="#FE595F" style="line-height:90rpx;padding-left:30rpx;"/>
+        </view>  
+        <van-field
+            value="{{ desc }}"
+            label="反馈说明"
+            autosize
+            placeholder="请输入反馈说明"
+            maxlength="50"
+            type="textarea"
+        />
+    <view class="button">保存</view>
+</view>
+    

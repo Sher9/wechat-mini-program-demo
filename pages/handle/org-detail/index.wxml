@@ -1,0 +1,43 @@
+<view class="main_view">
+   <view class="partition_line">基本信息</view>
+    <view>
+        <van-cell title="组织信息" value="中国志愿者协会"/>
+        <van-cell title="所属性质" value="体育健身类"/>
+        <van-cell title="注册时间" value="2018-12-32"/>
+        <van-cell title="负责人" value="张三"/>
+        <van-cell title="证件类型" value="护照"/>
+        <van-cell title="证见号码" value="123"/>     
+        <van-cell title="组织规模" value="20人"/>
+        <van-cell title="组织状态" value="正常"/>
+        <van-cell title="组织说明" value="带给志愿者服务、弘扬志愿者精神"/>
+    </view>
+    <view class="partition_line">附件</view>
+        <view class="file">
+            <view wx:for="{{uploadImglist}}" wx:for-item="img" wx:key="{{index}}" class="previewimg">
+                <view class="file_delete" data-index="{{index}}" bindtap="deleteImg">
+                    <van-icon name="cross" />
+                </view>
+                <image src="{{img}}" data-src="{{img}}" bindtap="previewUploadImage"></image>
+            </view>
+            <view class="file_add" bindtap="chooseImg">
+                <image
+                    src="../../../static/images/file_add.png"
+                    width="100%"
+                    height="100%"
+                ></image>
+            </view>
+        </view>
+    <view class="partition_line">审批流程</view>
+    <view class="process_view">
+        <view class="role">社区管理员</view>
+        <view class="date">2019-01-01 08 :46</view>
+        <view class="text">很有意义，希望以后多办理一些这样活动。门前大桥下，游过一群鸭，快来数一数，二是六七八</view>
+    </view>
+    <view class="process_view">
+        <view class="role">社区管理员2</view>
+        <view class="date">2019-01-01 08 :46</view>
+        <view class="text">很有意义，希望以后多办理一些这样活动。门前大桥下，游过一群鸭，快来数一数，二是六七八</view>
+    </view>
+    <view class="button">保存</view>
+</view>
+        

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "van-cell": "../../static/plugin/vant/cell/index",
+        "van-tag": "../../static/plugin/vant/tag/index",
+        "van-rate": "../../../static/plugin/vant/rate/index",
+        "van-field": "../../static/plugin/vant/field/index",
+        "van-icon": "../../static/plugin/vant/icon/index"
+    }
+}

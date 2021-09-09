@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "问题受理",
+    "usingComponents": {
+        "van-cell": "../../static/plugin/vant/cell/index",
+        "van-icon": "../../static/plugin/vant/icon/index",
+        "van-button": "../../static/plugin/vant/button/index",
+        "van-field": "../../static/plugin/vant/field/index",
+        "van-picker": "../../static/plugin/vant/picker/index",
+        "van-datetime-picker": "../../static/plugin/vant/datetime-picker/index",
+        "van-popup": "../../static/plugin/vant/popup/index",
+        "van-rate": "../../../static/plugin/vant/rate/index",
+        "cascader": "../cascader/index"
+    }
+}

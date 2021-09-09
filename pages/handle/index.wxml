@@ -1,0 +1,57 @@
+<view class="mainbox">
+    <van-search
+        value="{{ params.keywords }}"
+        placeholder="请输入搜索关键词"
+        use-action-slot
+        bind:search="onSearch"
+        background="#028FFB"
+    >
+        <view slot="action" bindtap="onFilter" style="height:60rpx;">
+            <van-icon name="filter-o"  custom-style=" color: #fff;" size="50rpx"/>
+        </view>
+    </van-search>
+    <van-tabs
+        animated
+        swipeable
+        active="{{ active }}"
+        lazy-render="true"
+        ellipsis="false"
+        color="#028FFB"
+        title-active-color="#028FFB"
+    >
+        <van-tab title="民生诉求"><complaint></complaint></van-tab>
+        <van-tab title="社会组织"><org></org></van-tab>
+        <van-tab title="社区活动"><activity></activity></van-tab>
+    </van-tabs>
+    <van-transition show="{{ popupShow }}" custom-class="block" name="fade-right">
+        <view class="popup">
+            <view class="popup_bg"> </view>
+            <view class="popup_view"> 
+               <!-- <view class="picker_view">
+                    <picker  bindchange="bindPickerChange2" value="{{objectIndex}}" range="{{objectArray}}" range-key="name">
+                        <view class="picker">
+                            <text class="picker_label">问题类型</text>
+                            <view  class='picker_text' ><input placeholder='请选择问题类型'  value='{{objectArray[objectIndex].name}}'  placeholder-class="phcolor"/></view>
+                        </view>
+                    </picker>
+                </view> -->
+                <view class="popup_condition">
+                     <view class="contion_title">
+                          问题类型
+                     </view>
+                     <view>
+                         <text class="contion_option_text">问题1</text>
+                         <text class="contion_option_text">问题2</text>
+                         <text class="contion_option_text">问题3</text>
+                         <text class="contion_option_text">问题啊啊啊啊</text>
+                         <text class="contion_option_text active">问题5</text>
+                     </view>
+                </view>
+                <view class="popup_button">
+                    <text class="popup_reset" bindtap="onFilter">取消</text>
+                    <text class="popup_sure">确定</text>
+               </view>
+            </view>
+        </view>
+    </van-transition> 
+</view>

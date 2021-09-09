@@ -1,0 +1,134 @@
+<view class="main_view">
+  <view class="icon"   bindtap="switchButton">
+    <van-icon name="{{showButton ?'cross' : 'plus'}}" style="vertical-align:middle;"/>
+    <view class="icon_bg" style="background: {{ showButton ? '#000' :  '#028ffb' }}"></view>
+  </view>
+  <view class="button" hidden="{{!showButton}}">
+    <van-button plain type="info" size="small">上报</van-button>
+    <van-button plain type="info" size="small"  bindtap="dispatch">下发</van-button>
+    <van-button plain type="info" size="small"  bindtap="feedback">反馈</van-button>
+  </view>
+  <view class="partition_line">基本信息</view>
+  <view>
+    <van-cell title="问题标题" value="门前大桥下，游过一群鸭"/>
+    <van-cell title="问题类型" value="门前大桥下，游过一群鸭"/>
+    <van-cell title="联系电话" value="门前大桥下，游过一群鸭"/>
+    <van-cell title="问题描述" value="门小区的绿化和娱乐设施先不说了，请晋江新城开发商能销售双合同。呵呵呵呵"/>
+  </view>
+  <view class="partition_line">附件</view>
+    
+  <view class="file">
+    <view wx:for="{{imglist}}" wx:for-item="image" wx:key="{{index}}" class="previewimg">
+       <image src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+    </view>
+  </view>
+  <view class="partition_line">受理信息</view>
+  <view>
+    <van-field
+      value="{{ formData.title }}"
+      label="修正标题"
+      clearable
+      placeholder="请输入修正标题"
+      maxlength="50"
+      />
+    <view class="picker_view">
+      <picker  bindchange="bindPickerChange2" value="{{objectIndex}}" range="{{objectArray}}" range-key="name">
+        <view class="picker">
+          <text class="picker_label">问题性质</text>
+          <view  class='picker_text' ><input placeholder='请选择问题性质'  value='{{objectArray[objectIndex].name}}'  placeholder-class="phcolor"/></view>
+        </view>
+      </picker>
+    </view>
+    <view class="picker_view">
+      <picker  bindchange="bindPickerChange2" value="{{objectIndex}}" range="{{objectArray}}" range-key="name">
+        <view class="picker">
+          <text class="picker_label">处置单位</text>
+          <view  class='picker_text' ><input placeholder='请选择处置单位'  value='{{objectArray[objectIndex].name}}'  placeholder-class="phcolor"/></view>
+        </view>
+      </picker>
+    </view>
+    <van-field
+      value="{{ formData.happenTime }}"
+			clearable
+			label="事发时间"
+			placeholder="请选择事发时间"
+      bind:focus="onOpen"
+      data-flag="happenTime"
+		/>
+    <view class="picker_view">
+      <picker  bindchange="bindPickerChange2" value="{{objectIndex}}" range="{{objectArray}}" range-key="name">
+        <view class="picker">
+          <text class="picker_label">处理时间</text>
+          <text class="picker_text">{{objectArray[objectIndex].name}}</text>
+        </view>
+      </picker>
+    </view>
+    <van-field
+      value="{{ formData.desc }}"
+      label="处理情况"
+      autosize
+      placeholder="请输入处理情况"
+      maxlength="50"
+      type="textarea"
+    />
+  </view>
+  <view class="partition_line">处理情况附件上传</view>
+  <view class="file">
+    <view wx:for="{{uploadImglist}}" wx:for-item="img" wx:key="{{index}}" class="previewimg">
+      <view class="file_delete" data-index="{{index}}" bindtap="deleteImg">
+        <van-icon name="cross" />
+      </view>
+      <image src="{{img}}" data-src="{{img}}" bindtap="previewUploadImage"></image>
+    </view>
+    <view class="file_add" bindtap="chooseImg">
+      <image
+      src="../../../static/images/file_add.png"
+      width="100%"
+      height="100%"
+      ></image>
+    </view>
+  </view>
+  <view class="partition_line">反馈情况</view>
+  <view>
+    <view class="rate_view">
+      <text class="rate_text">满意度</text>
+      <van-rate value="{{ score }}" color="#FE595F" style="line-height:90rpx;padding-left:30rpx;"/>
+    </view>
+    <view class="picker_view">
+      <picker  bindchange="bindPickerChange2" value="{{objectIndex}}" range="{{objectArray}}" range-key="name">
+        <view class="picker">
+          <text class="picker_label">反馈情况</text>
+          <view  class='picker_text' ><input placeholder='请选择反馈情况'  value='{{objectArray[objectIndex].name}}'  placeholder-class="phcolor"/></view>
+        </view>
+      </picker>
+   </view>
+   <van-field
+      value="{{ formData.desc }}"
+      label="反馈说明"
+      autosize
+      placeholder="请输入反馈说明"
+      maxlength="50"
+      type="textarea"
+    />
+  </view> 
+  <van-popup show="{{ datetimeShow }}"  position="bottom"  close-on-click-overlay="false">    
+    <van-datetime-picker
+      type="datetime"
+      value="{{ currentDate }}"
+      bind:confirm="confirm"
+      bind:cancel="cancel"
+    />
+  </van-popup> 
+  <van-popup show="{{ feedbackShow }}"  position="bottom"  close-on-click-overlay="false">  
+    <view class="popup">
+      <view class="popup_button">
+        <text bindtap="onFeedbackClose" class="cancel">取消</text>
+        <text class="sure">确定</text>
+      </view>
+      <textarea placeholder="问题反馈详情"  placeholder-class="phcolor"/>
+    </view>  
+  </van-popup> 
+  <van-popup show="{{ dispatchShow }}"  position="bottom"  close-on-click-overlay="false">  
+    <cascader></cascader> 
+  </van-popup>        
+</view>

@@ -1,0 +1,27 @@
+<scroll-view  scroll-y="true" lower-threshold="800">
+    <view wx:for="{{ complaintList }}" wx:for-item="complaint" wx:key="complaint.id"  class="list">
+        <view class="left_icon">
+              <text>问题处理</text>
+        </view>
+        <view class="right_con">
+           <view class="top_title">
+              <text class="title">{{ complaint.userName }}</text>
+              <van-rate value="{{ complaint.score }}"  disabled disabled-color="rgb(255, 210, 30)"/>
+              <text class="button effective " bindtap="viewDetail" data-id="{{ complaint.id }}">{{ complaint.dealStatus }}</text>
+           </view>
+           <view class="text">{{ complaint.desc }}</view>
+           <view class="date effective">{{ complaint.time }}</view>
+           <view class="file">
+               <view
+                wx:for="{{ complaint.medias }}"
+                wx:for-item="image"
+                wx:key="mediaID"
+                class="file_div"
+               >
+                
+                <image src="{{image.mediaPath}}" width="100%" />
+               </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
